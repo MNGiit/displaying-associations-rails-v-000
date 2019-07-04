@@ -31,5 +31,6 @@ class PostsController < ApplicationController
 	private
 	
 	def post_params
+	  # params.require(:user).permit(:username, :email, :password, :salt, :encrypted_password)
 	  params.require(:post).
 end

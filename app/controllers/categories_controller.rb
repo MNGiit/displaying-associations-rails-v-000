@@ -25,4 +25,10 @@ class CategoriesController < ApplicationController
     category.update(params.require(:category))
     redirect_to category_path(category)
   end
+  
+  private
+  def post_params
+	  # params.require(:user).permit(:username, :email, :password, :salt, :encrypted_password)
+	  params.require(:post).permit(:title, :description, :category)
+	end
 end
